@@ -1,0 +1,1 @@
+SELECT Name, IsActive, LastLoginDate, Id,Profile.UserLicense.Name , username FROM User WHERE IsActive = TRUE AND Id IN (SELECT userId FROM userLogin WHERE IsFrozen = TRUE) AND Profile.UserLicense.Name = 'Salesforce'
